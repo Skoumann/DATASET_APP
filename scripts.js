@@ -24,6 +24,10 @@ function applyFilter() {
         filteredDatasets = datasets.filter(d => d.type === 'PAS');
     } else if (filterParam === 'toolbox') {
         filteredDatasets = datasets.filter(d => d.type === 'toolbox');
+    } else if (filterParam === 'her') {
+        filteredDatasets = datasets.filter(d => d.type === 'her');
+    } else if (filterParam === 'sec') {
+        filteredDatasets = datasets.filter(d => d.type === 'sec');
     } else if (filterParam === 'hidden') {
         filteredDatasets = datasets.filter(d => d.type === 'hidden');
     } else {
@@ -59,6 +63,8 @@ function updateFullScreenContent() {
     const iframe = document.getElementById('fullscreen-iframe');
     if (iframe) {
         iframe.src = dataset.src;
+        // Apply margin if defined
+        iframe.style.marginTop = dataset.iframeMarginTop || '0px';
     }
 
     // Update the URL to reflect the current dataset
@@ -123,15 +129,46 @@ function openInfoModal() {
 
     document.getElementById('modal-headline').innerText = dataset.headline;
     document.getElementById('modal-partner').innerText = dataset.info.partnerInfo;
-    document.getElementById('modal-flightHeight').innerText = dataset.info.flightHeight;
-    document.getElementById('modal-gsd').innerText = dataset.info.gsd;
+    //document.getElementById('modal-flightHeight').innerText = dataset.info.flightHeight;
+    //document.getElementById('modal-gsd').innerText = dataset.info.gsd;
     document.getElementById('modal-camera').innerText = dataset.info.camera;
-    document.getElementById('modal-speed').innerText = dataset.info.speed;
-    document.getElementById('modal-text').innerText = dataset.text;
+
+    document.getElementById('modal-text').innerHTML = dataset.text;
 
     const downloadButton = document.getElementById('download-dataset');
     const caseStoryButton = document.getElementById('case-story');
     const modalVideo = document.getElementById('modal-video');
+
+    // Handling optional fields like Speed
+    const speedElement = document.getElementById('modal-speed').parentElement;
+    if (dataset.info.speed && dataset.info.speed.trim() !== "") {
+        document.getElementById('modal-speed').innerText = dataset.info.speed;
+        speedElement.style.display = 'block';
+    } else {
+        speedElement.style.display = 'none';
+    }
+
+    const gsdWrapper = document.getElementById('modal-gsd-wrapper');
+    if (dataset.info.gsd && dataset.info.gsd.trim() !== "") {
+        document.getElementById('modal-gsd').innerText = dataset.info.gsd;
+        gsdWrapper.style.display = 'block';
+    } else {
+        gsdWrapper.style.display = 'none';
+    }
+
+    const distanceWrapper = document.getElementById('modal-distance-wrapper');
+    if (dataset.info.flightHeight && dataset.info.flightHeight.trim() !== "") {
+        document.getElementById('modal-flightHeight').innerText = dataset.info.flightHeight;
+        distanceWrapper.style.display = 'block';
+    } else {
+        distanceWrapper.style.display = 'none';
+    }
+
+
+
+
+
+
 
     if (dataset.downloadUrl) {
         downloadButton.href = dataset.downloadUrl;

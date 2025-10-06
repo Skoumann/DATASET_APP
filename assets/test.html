@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Three Iframes Pie Layout with SVG</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Style for overlay labels */
+    .overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 5px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    /* Remove default margins inside our XHTML bodies */
+    body.xhtml-body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- The SVG fills the entire viewport.
+       Using preserveAspectRatio="none" makes the viewBox stretch to fill any aspect ratio -->
+  <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+      <!-- Define three clipPaths for the wedge sectors.
+           The center is (50,50) with a “radius” of 50 in our 100×100 viewBox -->
+      <!-- Wedge 1: from 0° to 120° -->
+      <clipPath id="clip1">
+        <polygon points="50,50 100,50 25,93.3" />
+      </clipPath>
+      <!-- Wedge 2: from 120° to 240° -->
+      <clipPath id="clip2">
+        <polygon points="50,50 25,93.3 25,6.7" />
+      </clipPath>
+      <!-- Wedge 3: from 240° to 360° -->
+      <clipPath id="clip3">
+        <polygon points="50,50 25,6.7 100,50" />
+      </clipPath>
+    </defs>
+
+    <!-- Wedge 1 using foreignObject -->
+    <foreignObject x="0" y="0" width="100" height="100" clip-path="url(#clip1)">
+
+      <body class="xhtml-body" xmlns="http://www.w3.org/1999/xhtml">
+        <iframe
+          src="https://app.surveytransfer.net/file/7594b38e-59cb-4f11-acb2-a7cf28ffd497?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM"
+          style="width:100%; height:100%; border:none;"></iframe>
+        <div class="overlay">Camera: P5 80mm GSD: 0.5mm Distance: 100m</div>
+      </body>
+    </foreignObject>
+
+    <!-- Wedge 2 using foreignObject -->
+    <foreignObject x="0" y="0" width="100" height="100" clip-path="url(#clip2)">
+
+      <body class="xhtml-body" xmlns="http://www.w3.org/1999/xhtml">
+        <iframe
+          src="https://app.surveytransfer.net/file/403bfaf3-88e4-4f67-a478-0fdb4f6396b9?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM"
+          style="width:100%; height:100%; border:none;"></iframe>
+        <div class="overlay">Camera: Sony LR1 24mm GSD: 1.7cm Distance: 100</div>
+      </body>
+    </foreignObject>
+
+    <!-- Wedge 3 using foreignObject – update URL and text as needed -->
+    <foreignObject x="0" y="0" width="100" height="100" clip-path="url(#clip3)">
+
+      <body class="xhtml-body" xmlns="http://www.w3.org/1999/xhtml">
+        <iframe
+          src="https://app.surveytransfer.net/file/403bfaf3-88e4-4f67-a478-0fdb4f6396b9?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM"
+          style="width:100%; height:100%; border:none;"></iframe>
+        <div class="overlay">Third Dataset Info</div>
+      </body>
+    </foreignObject>
+  </svg>
+</body>
+
+</html>

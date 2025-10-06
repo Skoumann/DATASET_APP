@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TerraExplorer Fusion — Embedded</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer" />
+  <style>
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Ubuntu, Arial
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 100%;
+      padding: 12px;
+      box-sizing: border-box
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 12px
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .pill {
+      font-size: 12px;
+      border: 1px solid #374151;
+      border-radius: 9999px;
+      padding: 4px 10px
+    }
+
+    .ok {
+      color: #22c55e
+    }
+
+    .bad {
+      color: #ef4444
+    }
+
+    code {
+      background: #0b1220;
+      border-radius: 6px;
+      padding: 2px 6px
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 140px);
+      border: 0;
+      border-radius: 12px;
+      background: black
+    }
+
+    a.btn,
+    button {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-decoration: none
+    }
+
+    a.btn:hover,
+    button:hover {
+      opacity: .9
+    }
+  </style>
+</head>
+
+<body>
+
+  <iframe id="tef"
+    src="https://cloud.skylineglobe.com/sg/TEF/TE.html?project=https://cloud.skylineglobe.com/sg/Skyline/projects/PhaseOne_PAS880_LittleRock"
+    allow="cross-origin-isolated; fullscreen" allowfullscreen referrerpolicy="no-referrer" loading="eager"></iframe>
+  </div>
+
+  <script>
+    const iso = document.getElementById('iso');
+    if (window.crossOriginIsolated) {
+      iso.textContent = 'crossOriginIsolated = true';
+      iso.className = 'pill ok';
+    } else {
+      iso.textContent = 'crossOriginIsolated = false';
+      iso.className = 'pill bad';
+    }
+  </script>
+</body>
+
+</html>

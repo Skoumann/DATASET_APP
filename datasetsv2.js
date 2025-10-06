@@ -9,13 +9,14 @@ const datasets = [
             partnerInfo: 'NIRA',
             flightHeight: '10m',
             gsd: '0.04 cm',
-            camera: 'GS120',
+            camera: 'IXM-100',
             speed: '3 m/s'
         },
-        text: "This concrete inspection was flow with the Phase One P3 combined with the IXMGS120 and the DJI M300. We executed an automated flight mission with Drone Harmony which took around 30 minutes to Capture. This data was then processed in Pix4d to give a final model which you can see hosted here in NIRA",
+        text: "This concrete inspection was flow with the Phase One P3 combined with the IXM-100 and the DJI M300. We executed an automated flight mission with Drone Harmony which took around 30 minutes to Capture. This data was then processed in RealityCapture to give a final model which you can see hosted here in NIRA",
         downloadUrl: "https://www.phaseone.com/access-phase-one-datasets/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         caseStoryUrl: "",
-        youtubeUrl: ""
+        youtubeUrl: "https://www.youtube.com/embed/7W5u4cmnpCk?si=WlNB_d3nhJbK14aP",
+        iframeMarginTop: '60px'
     },
 
     {
@@ -34,7 +35,29 @@ const datasets = [
         downloadUrl: "https://www.phaseone.com/access-phase-one-datasets-p5/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         caseStoryUrl: "",
         youtubeUrl: "https://www.youtube.com/embed/vtYsx0iuOpY"
-    },
+    }
+
+    ,
+
+    {
+        id: 'Picterra-Plowman-Craven',
+        src: 'https://cloud.picterra.ch/internal/7e6b9a3e-11ae-4ca4-9608-5c2339361b34/plowman/v2/index.html',
+        headline: 'Rail AI Detection',
+        type: 'p3',
+        info: {
+            partnerInfo: 'Plowman Craven & Picterra',
+            flightHeight: '25m',
+            gsd: '0.1 cm',
+            camera: 'GS100 80mm',
+            speed: '6 m/s'
+        },
+        text: "Network Rail, a key partner in the In2Track3 project, showcases advanced technology integrated into the initiative to enhance railway infrastructure inspection. Utilizing drones equipped with a high-resolution Phase One camera, the project leverages cutting-edge photogrammetry software to enable autonomous inspections of switches and crossings. The exceptional image quality captured by the Phase One camera significantly improves AI-driven analysis, ensuring more precise and reliable inspection results.",
+        downloadUrl: "",
+        caseStoryUrl: "https://www.phaseone.com/inspiration/pc-rail-inspection-2/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
+        youtubeUrl: "https://www.youtube.com/embed/MinEni6xmmg"
+    }
+
+    ,
 
     {
         id: 'Airport-Ortho',
@@ -56,7 +79,7 @@ const datasets = [
     {
         id: 'Railway-BE',
         src: 'https://app.surveytransfer.net/file/63496f53-3c27-4bee-ba82-b23f3020a02e?shareKey=7Q3xbQrmbqMnPGWMkxKjOSpEA48QKizmTkjc1VnfBog',
-        headline: 'Railway BE Ortho',
+        headline: 'Railway Ortho',
         type: 'p5',
         info: {
             partnerInfo: 'PIX4D',
@@ -73,7 +96,7 @@ const datasets = [
     {
         id: 'Danish-Rail',
         src: 'https://app.gnextlabs.com/embedded/viewer/6c07d6547c6005c2a6e5837ece57661a',
-        headline: 'Danish Rail Mesh',
+        headline: 'Rail Mesh',
         type: 'p3',
         info: {
             partnerInfo: 'GNEXT',
@@ -85,8 +108,34 @@ const datasets = [
         text: "This rail inspection was flow with the Phase One P3 combined with the IXMGS120 and the DJI M350. We flew a manual mission using automated distance triggering on the P3 capturing 2 different angles of the rail. (Note only one side of the rail was captured) which took around 10 minutes to capture. The IIQs were then uploaded directly to Gnext which processed this model in their cloudbased software. ",
         downloadUrl: "https://www.phaseone.com/access-phase-one-datasets/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         caseStoryUrl: "",
-        youtubeUrl: ""
-    },
+        youtubeUrl: "https://www.youtube.com/embed/pkahJenv7CU?si=KQtRXWQg0QVvoj3l"
+    }
+
+    ,
+    {
+        id: 'Moving-Wind',
+        src: 'https://3d7e2f09aef4e6e5e8bf-2e6cbc6a292bb4fa6468eb77c1a16f2d.ssl.cf5.rackcdn.com/index.html',
+        headline: 'Moving Turbine',
+        type: 'p3',
+        info: {
+            partnerInfo: 'PhaseOne',
+            flightHeight: '20-40m',
+            gsd: 'About 0.1 cm',
+            camera: 'P3 80mm',
+            speed: '3 m/s'
+        },
+        text: "",
+        downloadUrl: "https://www.phaseone.com/access-phase-one-datasets/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
+        caseStoryUrl: "https://www.phaseone.com/inspiration/inspecting-wind-turbine-blades-while-they-are-rotating/",
+        youtubeUrl: "https://www.youtube.com/embed/8YeUBc9NEkA"
+    }
+
+
+
+
+
+
+    ,
     {
         id: 'Cell-Tower',
         src: 'https://demo.nira.app/a/qwPQTi3uRwqNDZi_tPuzFA/1',
@@ -102,12 +151,13 @@ const datasets = [
         text: "This cell tower inspection was flow with the Phase One P3 combined with the IXMGS120 and the DJI M350. We executed an automated flight mission with Drone Harmony which took around 30 minutes to Capture and combined this with some manual flying to complete this. For this example we took many more images than would be traditionally needed to ensure we could make the best possible model. This data was then processed by NIRA and hosted on their platform.",
         downloadUrl: "https://www.phaseone.com/access-phase-one-datasets/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         caseStoryUrl: "",
-        youtubeUrl: ""
+        youtubeUrl: "https://www.youtube.com/embed/e-TOY9UdtMs?si=jy44oUJLJpEWZm8v",
+        iframeMarginTop: '60px'
     },
     {
         id: 'Town-Roof',
         src: 'https://app.surveytransfer.net/file/c839b3f4-7b01-49b3-b7a3-9d2220a84d99?shareKey=O_e4duaB9cvPEVvF-lvBLC_PZG-q_lvtLSkTpkGORGw',
-        headline: 'Town Roof inspection',
+        headline: 'Town inspection Ortho',
         type: 'p5',
         info: {
             partnerInfo: 'Drone Institute',
@@ -196,19 +246,19 @@ const datasets = [
     }
     ,
     {
-        id: 'Power Line',
-        src: 'Tools/Gallery/Power/powergeneric.html',
-        headline: 'Powerline',
-        type: 'hidden',
+        id: 'Power-Line-snow',
+        src: 'https://eb8b473fc414f223cd7c-60db0e4f5bd76230b6bb418631a18948.ssl.cf5.rackcdn.com',
+        headline: 'Powerline inspection',
+        type: 'p5',
         info: {
-            partnerInfo: '',
-            flightHeight: '',
-            gsd: '',
-            camera: '',
-            speed: ''
+            partnerInfo: 'PhaseOne',
+            flightHeight: '120m (60m to the asset)',
+            gsd: '~3mm',
+            camera: 'P5',
+            speed: '18 m/s'
         },
-        text: "",
-        downloadUrl: "",
+        text: "P5 (mounted on fixed wing VTOL UAV)",
+        downloadUrl: "https://www.phaseone.com/access-phase-one-datasets-p5/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         caseStoryUrl: "",
         youtubeUrl: ""
     }
@@ -228,14 +278,14 @@ const datasets = [
         text: "The Phase One camera, combined with IIQ files, is the perfect solution for drone photography in demanding lighting conditions. Its exceptional dynamic range ensures critical details are preserved in both shadows and highlights, even when capturing images against the sun or in high-contrast environments. This capability is vital for professionals who rely on accurate and usable data for analysis, mapping, and inspection. With Phase One, you get unmatched image quality and post-processing flexibility, making it the ideal choice for aerial photography where precision matters most.",
         downloadUrl: "",
         caseStoryUrl: "https://www.phaseone.com/solutions/geospatial-solutions/uav-payloads/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
-        youtubeUrl: "https://www.youtube.com/embed/afKahiF7mL4"
+        youtubeUrl: "https://www.youtube.com/embed/s5b5PBt1Z_A?si=CnDybQi9mSdKHjMd"
     }
     ,
     {
         id: 'dynamic-house_p5',
         src: 'Tools/BAF/DynamicRange/house.html',
         headline: 'Dynamic Range',
-        type: 'hidden',
+        type: 'p3',
         info: {
             partnerInfo: 'Phase One',
             flightHeight: '60',
@@ -256,7 +306,7 @@ const datasets = [
         type: 'PAS',
         info: {
             partnerInfo: 'Flycom Technologies',
-            flightHeight: '1400',
+            flightHeight: '1400 Meter',
             gsd: '5 cm',
             camera: 'PAS 880',
             speed: '60 m/s'
@@ -266,6 +316,35 @@ const datasets = [
         caseStoryUrl: "https://www.phaseone.com/inspiration/revolutionizing-slovenian-urban-planning/?utm_source=datasetviewer&utm_medium=website&utm_campaign=GEO_Datasetviewer",
         youtubeUrl: "https://www.youtube.com/embed/SVBfK1TS9Go"
     },
+    {
+        id: 'Pas-Damage-Tornado',
+        src: 'https://surdex.maps.arcgis.com/apps/instant/media/index.html?appid=5f075c8ba75d4e6bb14b8111f7e6ed51',
+        headline: 'Tornado Damage',
+        type: 'PAS',
+        info: {
+            partnerInfo: 'Surdex',
+            flightHeight: '',
+            gsd: '',
+            camera: 'PAS Pana',
+            speed: ''
+        },
+        text: "On the morning of Saturday, May 17, just hours after a destructive tornado swept through parts of the St. Louis region, Surdex Corporation launched a rapid aerial data collection mission. Using the Phase One PAS Pana large-format aerial system, the team successfully captured high-resolution imagery of the affected areas to support emergency response, damage assessment, and recovery operations. This swift deployment highlights the power of integrated geospatial technology—combining aerial expertise and cutting-edge imaging systems to deliver mission-critical insights when timing matters most. ",
+        downloadUrl: "",
+        caseStoryUrl: "https://storymaps.arcgis.com/stories/786f2e531eb14d4b8298f51a0ca62a56",
+        youtubeUrl: "",
+        iframeMarginTop: '60px'
+
+    }
+
+
+
+
+
+
+
+
+
+    ,
     {
         id: 'MIO',
         src: 'Tools/Gallery/Tuscan/tuscan.html',
@@ -304,12 +383,12 @@ const datasets = [
         id: 'TinCup',
         src: 'https://proxyembed.replit.app/',
         headline: 'TinCup',
-        type: 'hidden',
+        type: 'her',
         info: {
             partnerInfo: 'verus.digital',
-            flightHeight: '60',
-            gsd: '0.25 cm',
-            camera: 'GS120',
+            flightHeight: 'xxxx',
+            gsd: 'xxxx',
+            camera: 'IXH-150',
             speed: '0 m/s'
         },
         text: "CultArm3D is the first mobile all-in-one solution for 3D digitization. Its modular design offers maximum versatility. Available in two versions, desktop and floorstanding, CultArm3D can be customized with various add-on modules to serve different purposes. We also offer digitization services as well as consulting, helping customers to find project-based solutions tailored to their needs.",
@@ -321,12 +400,12 @@ const datasets = [
         id: 'Elephant',
         src: 'https://proxyembed.replit.app/index2.html',
         headline: 'Elephant',
-        type: 'hidden',
+        type: 'her',
         info: {
             partnerInfo: 'verus.digital',
-            flightHeight: '',
-            gsd: '',
-            camera: '',
+            flightHeight: 'xxxx',
+            gsd: 'xxxx',
+            camera: 'IXH-150',
             speed: ''
         },
         text: "CultArm3D is the first mobile all-in-one solution for 3D digitization. Its modular design offers maximum versatility. Available in two versions, desktop and floorstanding, CultArm3D can be customized with various add-on modules to serve different purposes. We also offer digitization services as well as consulting, helping customers to find project-based solutions tailored to their needs.",
@@ -334,6 +413,113 @@ const datasets = [
         caseStoryUrl: "https://verus.digital",
         youtubeUrl: "https://player.vimeo.com/video/768085316"
     }
+
+    ,
+    {
+        id: 'High-Altitude',
+        src: 'https://app.surveytransfer.net/project/b9cbfe58-25de-4a3e-afd7-08dabbc0c479/compare?shareKey=f0pn3BqoMcsfVvBg6jCO7YnabUBVWXyrZwmo5LYEjnk#3encl6c/1omvd2a',
+        headline: 'High Altitude',
+        type: 'p5',
+        info: {
+            partnerInfo: 'PhaseOne',
+            flightHeight: '',
+            gsd: '',
+            camera: 'P5 80mm & , P5 35mm',
+            speed: '18 m/s',
+        },
+        text: `
+        
+        <p> The table below allows you to compare different lens choices and their results at various altitudes on the Phase One P5. The same 33.5ha area was flown at three different altitudes to showcase the differences. Use the dropdowns in the corners to select and compare your preferred options.
+  </p>
+        <table style="width: 100%; border-collapse: collapse; font-family: 'Open Sans', sans-serif; font-size: 15px; margin-top: 20px;">
+  <thead>
+    <tr style="background-color: #1c2333; color: white;">
+      <th style="border: 1px solid #ccc; padding: 10px;">Lens / Altitude</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">GSD</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Single Image Swath</th>
+      <th style="border: 1px solid #ccc; padding: 10px;"># of Images</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 35mm Header -->
+    <tr style="background-color: #e0e0e0; font-weight: bold;">
+      <td colspan="4" style="border: 1px solid #ccc; padding: 10px;">35mm</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">35mm - 200m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">19.7mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">265m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">139</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">35mm - 400m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">39.4mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">531m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">54</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">35mm - 800m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">78.8mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">1062m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">22</td>
+    </tr>
+
+    <!-- 80mm Header -->
+    <tr style="background-color: #e0e0e0; font-weight: bold;">
+      <td colspan="4" style="border: 1px solid #ccc; padding: 10px;">80mm</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">80mm - 200m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">8.6mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">116m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">589</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">80mm - 400m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">17.2mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">232m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">172</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">80mm - 800m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">34.5mm</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">465m</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">59</td>
+    </tr>
+  </tbody>
+</table>
+`,
+        downloadUrl: "https://app.surveytransfer.net/project/b9cbfe58-25de-4a3e-afd7-08dabbc0c479?shareKey=f0pn3BqoMcsfVvBg6jCO7YnabUBVWXyrZwmo5LYEjnk",
+        caseStoryUrl: "",
+        youtubeUrl: "https://www.youtube.com/embed/1r52IgQAcIc?si=Dt1XF5iPrIBOEUdj",
+
+    }
+
+
+    ,
+    {
+        id: 'P5_VS_LR1',
+        src: 'https://app.surveytransfer.net/project/b3371599-7ff6-4161-a589-00b450e9c4f1/compare?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM#3uhhgb4/0809e2f',
+        headline: 'P5 vs LR1',
+        type: 'hidden',
+        info: {
+            partnerInfo: 'PhaseOne',
+            flightHeight: '100',
+            gsd: '0.5cm',
+            camera: 'P5 80mm',
+            speed: '18 m/s'
+        },
+        text: "",
+        downloadUrl: "",
+        caseStoryUrl: "",
+        youtubeUrl: "",
+        iframeMarginTop: '4px'
+    }
+
+
+
+
+
 
 
 ];

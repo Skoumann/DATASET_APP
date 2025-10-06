@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Datasets Display</title>
+  <style>
+    /* Remove default margins and ensure full height */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Container to hold both iframes side by side */
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    /* Each iframe wrapper takes equal space */
+    .iframe-wrapper {
+      flex: 1;
+      position: relative;
+    }
+
+    /* Style the iframes to fill their wrappers */
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Overlay style: dark transparent background with white text */
+    .overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 5px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- First dataset iframe -->
+    <div class="iframe-wrapper">
+      <iframe
+        src="https://app.surveytransfer.net/file/7594b38e-59cb-4f11-acb2-a7cf28ffd497?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM"></iframe>
+      <div class="overlay">Camera: P5 80mm GSD: 0.5mm Distance: 100m</div>
+    </div>
+    <!-- Second dataset iframe -->
+    <div class="iframe-wrapper">
+      <iframe
+        src="https://app.surveytransfer.net/file/403bfaf3-88e4-4f67-a478-0fdb4f6396b9?shareKey=dTwIQ_oT6U-NKbQIU671z2MINsSrcFDXbSh6QiWGQKM"></iframe>
+      <div class="overlay">Camera: Sony LR1 24mm GSD: 1.7cm Distance: 100</div>
+    </div>
+  </div>
+</body>
+
+</html>

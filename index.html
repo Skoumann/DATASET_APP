@@ -51,7 +51,10 @@
         </div>
         <div id="overlay"></div>
 
-        <iframe id="fullscreen-iframe"></iframe>
+        <iframe id="fullscreen-iframe" allow="cross-origin-isolated; fullscreen" allowfullscreen
+            referrerpolicy="no-referrer" loading="eager"
+            style="position:fixed; inset:0; width:100vw; height:100dvh; border:0;">
+        </iframe>
     </div>
 
     <div id="info-modal" class="modal">
@@ -59,8 +62,8 @@
             <span class="close" onclick="closeInfoModal()">&times;</span>
             <h2 id="modal-headline"></h2>
             <p><strong>Partner:</strong> <span id="modal-partner"></span></p>
-            <p><strong>Distance:</strong> <span id="modal-flightHeight"></span></p>
-            <p><strong>GSD:</strong> <span id="modal-gsd"></span></p>
+            <p id="modal-gsd-wrapper"><strong>GSD:</strong> <span id="modal-gsd"></span></p>
+            <p id="modal-distance-wrapper"><strong>Distance:</strong> <span id="modal-flightHeight"></span></p>
             <p><strong>Camera:</strong> <span id="modal-camera"></span></p>
             <p><strong>Speed:</strong> <span id="modal-speed"></span></p>
             <p id="modal-text"></p>
@@ -81,7 +84,7 @@
 
 
     <!-- Ensure scripts run after DOM is fully loaded -->
-    <script defer src="datasets.js"></script>
+    <script src="datasets-2025b.js"></script>
     <script defer src="scripts.js"></script>
 </body>
 
